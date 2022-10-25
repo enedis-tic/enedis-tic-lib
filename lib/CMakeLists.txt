@@ -2,7 +2,16 @@
 ##  @see    https://stackoverflow.com/questions/67397957/install-header-files-respecting-subdirectories-with-cmake
 #
 
+#
+# Global configurations
+#
 cmake_minimum_required(VERSION 3.16)
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+
 project(enedisTIC VERSION 1.0 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -120,6 +129,12 @@ target_sources(
             src/enedisTIC/utils.cpp
 )
 
+set_target_properties(
+    ${PROJECT_NAME}
+    PROPERTIES
+        SOVERSION
+            0.1
+)
 
 target_compile_definitions(
     ${PROJECT_NAME}
@@ -145,3 +160,57 @@ install(
             FRAMEWORK DESTINATION ${CMAKE_INSTALL_LIBDIR}
             RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
+
+
+
+##  Common CPack configuration
+##  @øee    https://cmake.org/cmake/help/book/mastering-cmake/chapter/Packaging%20With%20CPack.html
+set(CPACK_PACKAGE_VENDOR "Aloïké")
+
+
+##  CPack for Debian packages
+##  @see    https://cmake.org/cmake/help/book/mastering-cmake/chapter/Packaging%20With%20CPack.html#cpack-for-debian-packages
+
+set(
+    CPACK_GENERATOR
+        "DEB"
+        # "STGZ"
+)
+
+set(
+    CPACK_PACKAGE_DIRECTORY
+    ${PROJECT_BINARY_DIR}/package
+)
+
+set(
+    CPACK_DEBIAN_PACKAGE_DEBUG
+    "ON"
+)
+# set(
+#     CPACK_DEBIAN_PACKAGE_DEPENDS
+#         xxxx
+# )
+
+set(
+    CPACK_DEBIAN_PACKAGE_MAINTAINER
+        "Aloïké"
+)
+
+set(
+    CPACK_DEBIAN_PACKAGE_DESCRIPTION
+        "A library to decode data from Enedis french electricity provider's power meters."
+)
+
+set(
+    CPACK_DEBIAN_PACKAGE_SECTION
+        "devel"
+)
+
+set(
+    CPACK_DEBIAN_PACKAGE_PRIORITY
+        "optional"
+)
+
+
+# Must be included after all CPack variables are defined!
+include(CPack)

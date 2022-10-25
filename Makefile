@@ -11,7 +11,14 @@ build:
 	cd lib/build && make
 
 
+distclean:
+	rm -rf lib/build
+
+
 
 install:	build
 	cd lib/build && make install
 
+
+package:	build
+	cd lib/build && make package

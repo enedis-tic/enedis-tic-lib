@@ -31,13 +31,7 @@ add_library(${PROJECT_NAME} SHARED)
 target_include_directories(
     ${PROJECT_NAME}
         PRIVATE
-            # include
-            include/enedisTIC/
-            include/enedisTIC/datasets/
-            include/enedisTIC/datasets/historical
-            include/enedisTIC/datasets/standard
-            include/enedisTIC/transport
-            src
+            include
 )
 
 target_sources(
@@ -212,5 +206,5 @@ set(
 )
 
 
-# Must be included after all CPack variables are defined!
+# Must be included after all CPack variables are defined!
 include(CPack)

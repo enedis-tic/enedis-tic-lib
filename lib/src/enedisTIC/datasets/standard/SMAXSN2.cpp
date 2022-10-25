@@ -1,5 +1,5 @@
 /* Corresponding header inclusion */
-#include "SMAXSN2.h"
+#include "enedisTIC/datasets/standard/SMAXSN2.h"
 
 /* System includes */
 #include <stdexcept>

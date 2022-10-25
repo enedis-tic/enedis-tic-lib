@@ -1,5 +1,5 @@
 /* Corresponding header inclusion */
-#include "IINST2.h"
+#include "enedisTIC/datasets/historical/IINST2.h"
 
 /* System includes */
 #include <stdexcept>

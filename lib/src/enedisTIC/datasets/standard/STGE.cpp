@@ -1,5 +1,5 @@
 /* Corresponding header inclusion */
-#include "STGE.h"
+#include "enedisTIC/datasets/standard/STGE.h"
 
 /* System includes */
 #include <stdexcept>

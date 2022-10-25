@@ -1,5 +1,5 @@
 /* Corresponding header inclusion */
-#include "IMAX2.h"
+#include "enedisTIC/datasets/historical/IMAX2.h"
 
 /* System includes */
 #include <stdexcept>

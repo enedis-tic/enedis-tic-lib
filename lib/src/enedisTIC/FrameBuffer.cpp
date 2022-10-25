@@ -1,5 +1,5 @@
 /* Corresponding header inclusion */
-#include "FrameBuffer.h"
+#include "enedisTIC/FrameBuffer.h"
 
 /* System includes */
 #include <algorithm>
@@ -8,7 +8,7 @@
 /* Libraries includes */
 
 /* Project includes */
-#include "transport/Frame.h"
+#include "enedisTIC/transport/Frame.h"
 
 
 namespace TIC {

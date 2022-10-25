@@ -1,5 +1,5 @@
 /* Corresponding header inclusion */
-#include "SINSTS.h"
+#include "enedisTIC/datasets/standard/SINSTS.h"
 
 /* System includes */
 #include <stdexcept>

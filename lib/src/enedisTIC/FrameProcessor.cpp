@@ -1,5 +1,5 @@
 /* Corresponding header inclusion */
-#include "FrameProcessor.h"
+#include "enedisTIC/FrameProcessor.h"
 
 /* System includes */
 #include <iostream>
@@ -8,8 +8,8 @@
 /* Libraries includes */
 
 /* Project includes */
-#include "transport/Frame.h"
-#include "DatasetFactory.h"
+#include "enedisTIC/transport/Frame.h"
+#include "enedisTIC/DatasetFactory.h"
 
 
 /* ########################################################################## */

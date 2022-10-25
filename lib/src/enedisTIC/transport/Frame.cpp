@@ -1,5 +1,5 @@
 /* Corresponding header inclusion */
-#include "Frame.h"
+#include "enedisTIC/transport/Frame.h"
 
 /* System includes */
 #include <iostream>
@@ -8,7 +8,7 @@
 /* Libraries includes */
 
 /* Project includes */
-#include "../utils.h"
+#include "enedisTIC/utils.h"
 
 /* ########################################################################## */
 /* ########################################################################## */

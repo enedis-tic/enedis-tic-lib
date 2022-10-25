@@ -1,5 +1,5 @@
 /* Corresponding header inclusion */
-#include "PRM.h"
+#include "enedisTIC/datasets/standard/PRM.h"
 
 /* System includes */
 #include <stdexcept>

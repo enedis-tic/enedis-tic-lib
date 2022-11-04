@@ -46,10 +46,10 @@ AbstractDataset::AbstractDataset(
 
     /* Check the given label is valid */
     if(     pLabel.empty()
-        ||  pLabel.length() > 8 )
+        /*||  pLabel.length() > 8*/ )
     {
         throw std::out_of_range(
-            "pLabel must have a length of 1 to 8 chars!"
+            "pLabel must have a valid length!"
             " (pLabel='" + pLabel + "')"
         );
     }

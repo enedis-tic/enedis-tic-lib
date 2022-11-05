@@ -431,16 +431,16 @@ void
         lSpacingChar,
         C_CHARIDX_LABELSTART
     );
-    if(     lIdxLabelEnd > (C_CHARIDX_LABELSTART + C_LABEL_LENGTH)
-        ||  lIdxLabelEnd == std::string::npos )
+    if(     /*lIdxLabelEnd > (C_CHARIDX_LABELSTART + C_LABEL_LENGTH)
+        ||  */lIdxLabelEnd == std::string::npos )
     {
         throw std::runtime_error(
             "Invalid label length!"
-            " (expected length of less than "
+            /*" (expected length of less than "
             + std::to_string(C_LABEL_LENGTH)
             + ", got "
             + std::to_string(lIdxLabelEnd - C_CHARIDX_LABELSTART)
-            + " from data '" + pDatasetStr + "')"
+            + " from data '" + pDatasetStr + "')"*/
         );
     }
 

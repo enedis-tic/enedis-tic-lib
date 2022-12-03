@@ -234,30 +234,30 @@ void
     int lUtcOffset  = 0;
     int lTmDST      = -1;
     std::string lUtcOffsetStr   = "";
-    switch( pTimestampStr[0] )
-    {
-        case 'E':
-        case 'e':
-            /* Summer time */
-            lUtcOffset  = +2;
-            lUtcOffsetStr   = "+0200";
-            lTmDST  = 1;
-            break;
-
-        case 'H':
-        case 'h':
-            /* Winter time */
-            lUtcOffset      = +1;
-            lUtcOffsetStr   = "+0100";
-            lTmDST  = 0;
-            break;
-
-        default:
-            throw std::out_of_range(
-                "pTimestampStr has invalid season char!"
-            );
-            break;
-    }
+//    switch( pTimestampStr[0] )
+//    {
+//        case 'E':
+//        case 'e':
+//            /* Summer time */
+//            lUtcOffset  = +2;
+//            lUtcOffsetStr   = "+0200";
+//            lTmDST  = 1;
+//            break;
+//
+//        case 'H':
+//        case 'h':
+//            /* Winter time */
+//            lUtcOffset      = +1;
+//            lUtcOffsetStr   = "+0100";
+//            lTmDST  = 0;
+//            break;
+//
+//        default:
+//            throw std::out_of_range(
+//                "pTimestampStr has invalid season char!"
+//            );
+//            break;
+//    }
 
     tm  lTime;
 
